@@ -3,6 +3,8 @@ private String naziv;
 private double trajanje;
 private Autor autor;
 
+/**
+ * konstruktor metod za klasu, sa parametrima
 public Pjesma(String naziv, double trajanje, Autor noviAutor){
 	this.naziv=naziv;
 	this.trajanje =trajanje;
