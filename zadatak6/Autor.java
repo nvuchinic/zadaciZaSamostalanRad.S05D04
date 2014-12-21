@@ -10,6 +10,11 @@ private String spol;
  * @param email
  * @param spol
  */
+public Autor(String imePrezime, String email, String spol){
+	this.imePrezime=imePrezime;
+	this.email=email;
+	this.spol=spol;
+}
 
 /**
  * konstruktor metod za instanciranje klase, bez parametara(defaultni)
@@ -17,12 +22,6 @@ private String spol;
  * @param email
  * @param spol
  */
-public Autor(String imePrezime, String email, String spol){
-	this.imePrezime=imePrezime;
-	this.email=email;
-	this.spol=spol;
-}
-
 public Autor(){
 	this.imePrezime="nekoImePrezime";
 	this.email="nekiEmail";
