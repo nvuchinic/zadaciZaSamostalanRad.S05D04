@@ -1,8 +1,15 @@
+
 public class Knjizara {
 private String naziv;
 private Knjiga[] knjige;
 private int brNaslova;
 
+/**
+ * konstruktor metod za instanciranje klase, sa jednim parametrom.
+ * Prilikom poziva ovog konstruktora automatski se kreira niz knjiga
+ *  pozivom defaultnog konstruktora za klasu Knjiga.
+ * @param naziv
+ */
 public Knjizara(String naziv){
 	this.naziv=naziv;
 	int vel=5;
@@ -29,7 +36,10 @@ public void setBrNaslova(int brNaslova) {
 }
 
 
-
+/**
+ * metod za dodavanje objekta tipa knjiga u niz knjiga
+ * @param k
+ */
 public   void addKnjiga(Knjiga k){
 	
 	for(int i=0;i<brNaslova;i++){
@@ -45,6 +55,11 @@ public   void addKnjiga(Knjiga k){
 		brNaslova++;
 			}
 
+/**
+ * metod koji simulira prodaju knjiga, odnosno koji smanjuje raspolozivi broj primjeraka jednog naslova.
+ * Ako taj broj dostigne nula, naslov se brise iz niza(knjizare).
+ * @param knjiga
+ */
 public void prodajKnjigu(Knjiga knjiga){
 	for(int i=0;i<brNaslova;i++){
 		if(knjige[i].equals(knjiga)){
@@ -57,6 +72,11 @@ public void prodajKnjigu(Knjiga knjiga){
 	}
 }
 
+/**
+ * metod koji prosiruje niz knjiga kada broj knjiga u njemu dosegne maksimalnu velicinu niza
+ * @param size
+ * @return
+ */
 public   Knjiga[] prosiriKnjige(int size){
 	size=size*2;
 	Knjiga[] temp=new Knjiga[size];
@@ -68,7 +88,9 @@ public   Knjiga[] prosiriKnjige(int size){
 	return knjige;
 }
 
-
+/**
+ * metod koji kreira i vraca string reprezentaciju objekta tipa Knjizara
+ */
 public String toString(){
 	String knjizaraToString="";
 	knjizaraToString="NAZIV KNJIZARE: "+"\n"+naziv+"\n_______________________________";
@@ -78,6 +100,10 @@ public String toString(){
 	return knjizaraToString;
 }
 
+/**
+ * metod koji vrsi sortiranje a zatim ispis knjiga iz knjizare uzimajuci u obzir naziv knjige.
+ * Za sortiranje se koristi algoritam BubbleSort.
+ */
 public void ispisiPoNazivu(){
 	System.out.println("\n\n\nKNJIGE SORTIRANE PO NASLOVU:\n_____________________________\n_______________________________");
 	Knjiga temp;
@@ -96,7 +122,10 @@ public void ispisiPoNazivu(){
 	}
 }
 
-
+/**
+ * metod koji vrsi sortiranje a zatim ispis knjiga iz knjizare uzimajuci u obzir ime autora knjige.
+ * Za sortiranje se koristi algoritam BubbleSort.
+ */
 public void ispisiPoAutoru(){
 	Knjiga temp=new Knjiga();
 	System.out.println("\n\n\nKNJIGE SORTIRANE PO AUTORU:\n___________________________\n____________________________");
@@ -116,6 +145,10 @@ public void ispisiPoAutoru(){
 	}
 }
 
+/**
+ * metod koji vrsi sortiranje a zatim ispis knjiga iz knjizare uzimajuci u obzir cijenu knjige.
+ * Za sortiranje se koristi algoritam BubbleSort.
+ */
 public void ispisiPoCijeni(){
 	Knjiga temp=new Knjiga();
 	System.out.println("\n\n\nKNJIGE SORTIRANE PO CIJENI:\n___________________________\n____________________________");
