@@ -31,12 +31,6 @@ public Knjiga(){
 	autor=new Autor();
 }
 
-/*public Knjiga(String naziv, double cijena){
-	this.naziv=naziv;
-	this.cijena=cijena;
-	stanje++;
-}*/
-
 public void setNaziv(String noviNaziv){
 	naziv=noviNaziv;
 }
