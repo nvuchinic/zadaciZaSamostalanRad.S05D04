@@ -12,6 +12,24 @@ public Knjizara(String naziv){
 	}
 }
 
+public String getNaziv() {
+	return naziv;
+}
+
+public void setNaziv(String naziv) {
+	this.naziv = naziv;
+}
+
+public int getBrNaslova() {
+	return brNaslova;
+}
+
+public void setBrNaslova(int brNaslova) {
+	this.brNaslova = brNaslova;
+}
+
+
+
 public   void addKnjiga(Knjiga k){
 	
 	for(int i=0;i<brNaslova;i++){
