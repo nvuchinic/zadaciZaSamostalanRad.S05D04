@@ -1,6 +1,6 @@
 public class Knjizara {
 private String naziv;
-Knjiga[] knjige;
+private Knjiga[] knjige;
 int brNaslova;
 
 public Knjizara(String naziv){
