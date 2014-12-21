@@ -1,9 +1,16 @@
+
 public class Knjiga {
 private String naziv;
 private double cijena;
 private int stanje=0;
 Autor autor;
 
+/**
+ * konstruktor metod za instanciranje klase, sa parametrima
+ * @param naziv
+ * @param cijena
+ * @param noviAutor
+ */
 public Knjiga(String naziv, double cijena, Autor noviAutor){
 	this.naziv=naziv;
 	this.cijena=cijena;
@@ -14,6 +21,9 @@ public Knjiga(String naziv, double cijena, Autor noviAutor){
 	this.autor.setSpol(noviAutor.getSpol());
 }
 
+/**
+ * konstruktor metod za instanciranje klase, bez parametara(defaultni)
+ */
 public Knjiga(){
 	this.naziv="nekiAutor";
 	this.cijena=0;
@@ -21,11 +31,11 @@ public Knjiga(){
 	autor=new Autor();
 }
 
-public Knjiga(String naziv, double cijena){
+/*public Knjiga(String naziv, double cijena){
 	this.naziv=naziv;
 	this.cijena=cijena;
 	stanje++;
-}
+}*/
 
 public void setNaziv(String noviNaziv){
 	naziv=noviNaziv;
@@ -70,7 +80,9 @@ public int getStanje(){
 	return stanje;
 }
 
-
+/**
+ * metod koji kreira i vraca string reprezentaciju objekta tipa Knjiga
+ */
 public String toString(){
 	String knjigaToString="";
 	knjigaToString="Naziv djela: "+naziv+"\nCijena: "+cijena+"\nStanje: "+stanje+"\nPodaci o autoru: " 
@@ -78,20 +90,17 @@ public String toString(){
 	return knjigaToString;
 }
 
+/**
+ * metod koji vraca boolean vrijednost u ovisnosti da li su objekti tipa Knjiga koji se porede jednaki,
+ * (jednaki su ako su im jednaki naziv, cijena i autor)
+ * @param druga
+ * @return
+ */
 public boolean equals(Knjiga druga){
 	boolean iste=false;
 	if(this.naziv.equals(druga.naziv)&&this.cijena==druga.cijena&&this.autor.equals(druga.autor))
 		iste =true;
 	return iste;
-}
-
-public void copyKnjiga(Knjiga other){
-	this.naziv=other.naziv;
-	this.cijena=other.cijena;
-	this.stanje=other.stanje;
-	this.autor.setImePrezime(other.autor.getImePrezime());
-	this.autor.setEmail(other.autor.getEmail());
-	this.autor.setSpol(other.autor.getSpol());
 }
 
 }
