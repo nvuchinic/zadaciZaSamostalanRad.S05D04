@@ -1,18 +1,28 @@
+
 public class Autor {
 private String imePrezime;
 private String email;
 private String spol;
 
 /**
- * konstruktor metod za klasu, sa parametrima
+ *  konstruktor metod za instanciranje klase, sa parametrima
+ * @param imePrezime
+ * @param email
+ * @param spol
+ */
+
+/**
+ * konstruktor metod za instanciranje klase, bez parametara(defaultni)
+ * @param imePrezime
+ * @param email
+ * @param spol
+ */
 public Autor(String imePrezime, String email, String spol){
 	this.imePrezime=imePrezime;
 	this.email=email;
 	this.spol=spol;
 }
 
-/**
- * konstruktor metod, bez parametara(defaultni)
 public Autor(){
 	this.imePrezime="nekoImePrezime";
 	this.email="nekiEmail";
@@ -42,8 +52,16 @@ public String getSpol(){
 	return spol;
 }
 
+public boolean compare(Autor drugi){
+	boolean isti=false;
+	if(this.imePrezime.equals(drugi.imePrezime)&&this.email.equals(drugi.email)&&this.spol.equals(drugi.spol))
+		isti=true;
+	return isti;
+}
+
 /**
  * metod koji kreira i vraca String reprezentaciju objekta tipa Autor
+ */
 public String toString(){
 	String autorToString="";
 	autorToString="\t\tIme i prezime: "+imePrezime+"\n\t\tEmail: "+email+"\n\t\tSpol: "+spol;
@@ -53,6 +71,9 @@ public String toString(){
 /**
  * metod koji vraca boolean vrijednost u ovisnosti da li su objekti tipa Autor koji se porede jednaki(jednaki su
  * ako imaju isto ime, email i spol);
+ * @param drugi
+ * @return
+ */
 public boolean equals(Autor drugi){
 	boolean isti=false;
 	if(this.imePrezime.equals(drugi.imePrezime)&&this.email.equals(drugi.email)&&this.spol.equals(drugi.spol))
