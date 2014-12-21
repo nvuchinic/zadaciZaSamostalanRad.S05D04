@@ -1,7 +1,7 @@
 public class Knjizara {
 private String naziv;
 private Knjiga[] knjige;
-int brNaslova;
+private int brNaslova;
 
 public Knjizara(String naziv){
 	this.naziv=naziv;
