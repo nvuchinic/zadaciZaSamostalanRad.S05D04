@@ -51,12 +51,6 @@ public String getSpol(){
 	return spol;
 }
 
-public boolean compare(Autor drugi){
-	boolean isti=false;
-	if(this.imePrezime.equals(drugi.imePrezime)&&this.email.equals(drugi.email)&&this.spol.equals(drugi.spol))
-		isti=true;
-	return isti;
-}
 
 /**
  * metod koji kreira i vraca String reprezentaciju objekta tipa Autor
