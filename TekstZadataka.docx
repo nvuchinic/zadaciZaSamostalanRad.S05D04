@@ -1,0 +1,18 @@
+6) Napisati klasu Autor. Klasa Autor predstavlja, kako i samo ime kaze nekog Autora. Autor ima svoje ime, mail i spol. 
+Za klasu Autor napisati sve standardne metode.
+7) Napisati klasu Pjesma koja ima podatke o nazivu i duzini trajanja I autoru (pogledati zadatak 1).
+8) Napisati klasu Knjiga koja ima podatke o nazivu, cijeni, stanju (imamo 1, 2, 3 primjerka knjige ili nemamo knjigu
+na stanju). Dodatno svaka knjiga ima autora (pogledati zadatak 1). Napisati standardne metode.
+9) Napisati Klasu Knjizara koja ima podatke o imenu knjizare I knjigama koje su  u prodaji. 
+Napisati I testni program koji napravi novu knjizaru, doda u knjizaru odredeni broj knjiga a 
+zatim simulira da dodajemo nove knjige I da se knjige prodaju. Omoguciti da se ispisu knjige poredane po nazivu, 
+cijeni I imenu autora. 
+10) Napisati klasu Tacka koja predstavlja tacku u 2D koordinatnom sistemu. 
+Tacke u takvim sistemima imaju 2 koordinate: x i y. Klasa tacka osim standardnih metoda treba I 
+da ima metodu da provjeri koliko je jedna tacka udaljena od druge double getDistance(Point other).
+11) Napisite klasu krug koja ima 2 atributa prvi je centar kruga (tipa Tacka) a drugi je radius. 
+Osim standardnih metoda napisati I metodu koja ce vratiti -1 ako neka druga tacka lezi van tog kurga, 
+0 ukoliko je na granici kruga I 1 ukoliko je unutar kruga. Ta metoda moze izgledati kao isInside(Point other).
+Napisite I metodu koja ce vratiti true ukoliko se 2 kruga sjeku.
+
+
